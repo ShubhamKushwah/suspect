@@ -9,6 +9,7 @@ import {
   Modal,
 } from "@material-ui/core";
 import Canvas from "./Canvas";
+import Task2 from "./Task2";
 
 export default class App extends Component {
 
@@ -103,6 +104,7 @@ export default class App extends Component {
 
     return (
       <div className="main_container">
+        <h1>Task 1</h1>
         <Grid container>
           <Grid item xs={5}>
             <h3>Functions</h3>
@@ -187,6 +189,9 @@ export default class App extends Component {
           <Grid item xs={7}>
             <h3>Canvas</h3>
             <Canvas shapes={shapes}/>
+          </Grid>
+          <Grid item xs={12}>
+            <Task2 shapes={shapes} />
           </Grid>
         </Grid>
         <Modal

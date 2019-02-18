@@ -12,7 +12,7 @@ export default class Canvas extends Component {
           y={shape.shape_y}
           width={shape.shape_width}
           height={shape.shape_height}
-          fill={shape.shape_color}
+          stroke={shape.shape_color}
         />
       ));
 
