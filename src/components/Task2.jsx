@@ -10,7 +10,7 @@ import Face8 from '../assets/face8.jpeg';
 import Face9 from '../assets/face9.jpeg';
 import Face10 from '../assets/face10.jpeg';
 import {Stage, Layer, Image, Rect, Text} from "react-konva";
-import {Button, TextField} from '@material-ui/core';
+import {TextField} from '@material-ui/core';
 
 export default class Task2 extends Component {
   images = [Face1, Face2, Face3, Face4, Face5, Face6, Face7, Face8, Face9, Face10];
@@ -91,7 +91,7 @@ export default class Task2 extends Component {
           </Layer>
         </Stage>
         <h3>Add some captions</h3>
-        <form className="caption-form" onSubmit={this.onAddCaption}>
+        <form className="caption-form">
           <TextField
             className="accent-input"
             label="Enter Caption"
@@ -101,17 +101,6 @@ export default class Task2 extends Component {
             fullWidth
             onChange={this.onHandleChange}
           />
-          <TextField
-            className="accent-input"
-            label="Enter Image Number"
-            type="number"
-            name="img_number"
-            value={img_number}
-            fullWidth
-            onChange={this.onHandleChange}
-          />
-          <Button fullWidth className="accent-btn" color="primary" type="submit"
-                  variant="contained">Add Caption</Button>
         </form>
       </div>
     );

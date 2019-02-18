@@ -166,7 +166,7 @@ export default class App extends Component {
                 </form>
               </ExpansionPanelDetails>
             </ExpansionPanel>
-            <ExpansionPanel className="expansion-panel">
+            <ExpansionPanel defaultExpanded className="expansion-panel">
               <ExpansionPanelSummary className="expansion-panel__summary"
                                      expandIcon={<i className={"fas fa-chevron-down"}/>}>
                 <span>Manage</span>
@@ -191,9 +191,77 @@ export default class App extends Component {
             <Canvas shapes={shapes}/>
           </Grid>
           <Grid item xs={12}>
-            <Task2 shapes={shapes} />
+            <Task2 shapes={shapes}/>
+          </Grid>
+          <Grid item xs={12}>
+            <h2>How to use & Features</h2>
+            <ul>
+              <li>
+                <h4>Task 1:</h4>
+                <ul>
+                  <li>In the left side you'll see an expansion panel. Under
+                    the <strong>Create</strong> tab, you can create a rectange. Where you can enter
+                    the x-coordinate, y-coordinate, width, height, and color of the rectangle.
+                    You can try with these values:
+                    <p>X: 10</p>
+                    <p>Y: 20</p>
+                    <p>Width: 160</p>
+                    <p>Height: 160</p>
+                    <p>
+                      Color: Accepted values are in all supported formats:
+                      <br/>
+                      <br/>
+                      Regular html values/Hex Code/RGB collection/transparent RGB collection
+                      <br/>
+                      <br/>
+                      red/#ff0033/rgb(200, 100, 255)/rgba(100, 200, 50, 0.8)
+                    </p>
+                  </li>
+                  <li>Then click on <strong>Add</strong> button to add the shape to the canvas in
+                    the right, as well as in the images below.
+                  </li>
+                  <li>There's another expansion panel just below the <strong>Create</strong> tab.
+                    It's called <strong>Manage</strong>. There you'll see all your added rectangles
+                    named by their color. If you want to resize any rectangle, just click on the
+                    name, and a modal will open. There you can enter the new width and height of
+                    that specific rectangle. Click on the <strong>Done</strong> button to make the
+                    changes.
+                  </li>
+                  <li>
+                    There's also an <strong>X</strong> button, which is right next to the rectangle
+                    in the manage section. You can click on that button and it will instantly remove
+                    that rectangle from the list, as well as from the canvas.
+                  </li>
+                  <li>
+                    You can always collapse the expansion panels by clicking on the arrows, if you
+                    need more space to work on.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <h4>Task 2:</h4>
+                <ul>
+                  <li>
+                    Since, the Task 2 is integrated with the Task 1, whenever you add a rectangle
+                    from Task 1, it would be shown in the Task 1 canvas, as well as in the images
+                    canvas as well.
+                  </li>
+                  <li>
+                    There's a field for caption names below the images.
+                    <br/>
+                    Note: The captions would show on hovering over the images canvas, and disappear
+                    when your mouse is not over it.
+                  </li>
+                  <li>
+                    You can just change the caption name in the input field, and it would be
+                    automatically changed everywhere.
+                  </li>
+                </ul>
+              </li>
+            </ul>
           </Grid>
         </Grid>
+
         <Modal
           open={showModal}
           onClose={this.toggleModal}
