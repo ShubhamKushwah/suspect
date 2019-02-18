@@ -1,0 +1,97 @@
+.main_container {
+  padding: 32px;
+
+  &__form {
+    .accent-input {
+      margin-bottom: 8px;
+    }
+  }
+
+  .canvas {
+    canvas {
+      border: 1px solid #aaa !important;
+    }
+  }
+
+  .expansion-panel {
+    width: 400px;
+    max-width: 100%;
+
+    &__summary {
+      & > div {
+        margin: 0;
+      }
+    }
+
+    i {
+      font-size: 14px;
+    }
+  }
+
+  .shapes-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+
+    li {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+      border-radius: 4px 20px 20px 4px;
+      background: #607D8B;
+
+      button:first-child {
+        background: none;
+        padding: 8px;
+        border: none;
+        font-size: 16px;
+        letter-spacing: .5px;
+        color: $color-white;
+        font-weight: bold;
+        flex: 1;
+        text-align: start;
+      }
+
+      button:last-child {
+        background: none;
+        border: none;
+        margin: 8px;
+        border-radius: 20px;
+        width: 24px;
+        height: 24px;
+        text-align: center;
+        padding: 4px;
+        background: $color-white;
+      }
+
+      i {
+        color: #ff0033;
+      }
+    }
+  }
+}
+
+.custom-modal {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  margin-top: calc(50vh - 100px);
+
+  & > div {
+    outline: none;
+
+    &:last-child {
+      background: white;
+      padding: 16px;
+      border-radius: 4px;
+    }
+  }
+
+  form {
+    .accent-input {
+      margin-bottom: 8px;
+    }
+  }
+}

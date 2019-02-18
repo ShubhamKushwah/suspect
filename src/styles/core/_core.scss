@@ -1,0 +1,41 @@
+$color-white: #fff;
+$color-off-white: #f1f1f1;
+
+$color-accent: #4CAF50;
+
+html, body {
+  background: $color-off-white;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+h1, h2, h3 {
+  letter-spacing: .5px;
+}
+
+input,
+select,
+textarea,
+button {
+  &:focus {
+    outline: none;
+  }
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.accent-btn {
+  background: $color-accent !important;
+  color: $color-white !important;
+
+  i {
+    margin: 0 8px;
+  }
+}
